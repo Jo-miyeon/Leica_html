@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul,li {
+    list-style:none;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+}
+.row::after{    
+    clear:both;
+    content:"";
+    display:block;
+}
+.left {
+    float:left;
+}
+.right {
+    float:right;   
+}
+.top-menu {
+    background-color: rgb(21,21,21);
+    border-bottom: 1px solid rgb(48,48,48);
+    position:relative;
+}
+.top-menu>.inner{
+    height: 40px;
+    padding: 9px 40px;
+    box-sizing: border-box;   
+}
+.right>li {
+    float:left;
+    padding:3px;
+    padding-right:50px;
+    margin:30px;
+}
+.right::after {
+    clear:both;
+    content:"";
+    display:block;
+}
+.top-menu>.inner li a{
+    font-size: 13px;
+    color: rgb(132,132,132);
+    font-weight:bold;
+}
+.top-menu>.inner>.left {
+    position:absolute;
+    left:3%;
+    top:50%;
+    transform:translateY(-50%);
+}
+.top-menu>.inner>.right {
+    position:absolute;
+    right:3%;
+    top:50%;
+    transform:translateY(-50%);
+}
+.right>.search-box {  
+    display:inline-block;
+	position: relative;
+}
+.right>.search-box>.search-btn {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-image: url("https://www.leica-store.co.kr/pc/resource/images/common/ico_search_gr_12x12.png");
+	position:absolute;
+	top:20%;
+	left:52%;
+}
+.right>.korean-box>.korean-btn {
+    position:absolute;
+	top:40%;
+	left:23%;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-image: url("https://www.leica-store.co.kr/pc/resource/images/common/ico_kor_16x11.png");
+}
+.right>.login-box>.login-btn {
+    position:absolute;
+	top:40%;
+	left:44%;
+    width: 20px;
+    height: 20px;
+    background-position: center 6px;
+    background-image: url("https://www.leica-store.co.kr/pc/resource/images/common/ico_account_gr_13x12.png");
+    background-repeat: no-repeat;
+}
+.right>.store-box>.online-btn {
+    position:absolute;
+	top:40%;
+	left:77%;
+    width: 20px;
+    height: 20px;
+    background-position: center 5px;
+    background-image: url("https://www.leica-store.co.kr/pc/resource/images/common/ico_cart_wt_12x12.png");
+    background-repeat: no-repeat;
+}
+.store-box {
+    background-color:rgb(227,6,16);
+    border-radius:2px;
+	box-sizing:border-box;
+}
+.right>.store-box>.store {
+  position:relative;
+  left:30%;
+}
+.right>.store-box>.store>a {
+    color:white;
+    text-align:center;
+}
+/*두번째박스*/
+.second-box {
+    background-color: rgb(0,0,0);
+    border-bottom: 1px solid rgb(48,48,48);
+    position:relative;
+} 
+.second-box>.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+	position: relative;
+	height: 87px;
+}
+.second-box>.inner>.leica-img {
+    position:absolute;
+    left:5%;
+    top:50%;
+    transform:translateY(-50%);
+}
+.row {
+    content:"";
+    display:block;
+    clear:both;
+}
+.cell {
+    float:left;
+}
+.second-box>.inner .row .cell>a {
+    color: rgb(255,255,255);
+}
+.second-box>.inner>.nav-box {
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    left:10%;
+}
+.second-box>.inner>.nav-box .cell{
+    position:relative;
+    top:50%;
+    padding-right:20px;
+}
+.cart-btn{
+    width: 44px;
+    height: 40px;
+    float: right;
+    margin: 20px 0 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("https://www.leica-store.co.kr/pc/resource/images/common/ico_cart_wt_18x18.png");
+    transform: translateY(-50%); 
+
+}
+.cart-btn>span{
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    font-family: 'CorporateS-Bold';
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(255,255,255);
+    line-height: 18px;
+    text-align: center;
+    background-color: rgb(227,6,16);
+    border-radius: 50%;
+}
+.second-box>.inner>.nav-box .cell:hover>a {
+    color:rgb(227,6,16);
+}
+.nav-two {
+    background-color: rgb(0,0,0);
+    border-bottom: 1px solid rgb(48,48,48);
+	height: 0;
+	position: absolute;
+    width: 100%;
+    z-index: 9;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.nav-two.active {
+	height: 72px;
+}
+.nav-two>.nav-wrap {
+	height: 72px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.nav-two .con {
+    max-width: 1280px;
+	margin: 0 0 0 103px;
+    box-sizing: border-ox;		
+	display: none;
+}
+.nav-two .con.active {
+	display: block;
+}
+.nav-two .con ul li {
+	padding: 26px 0 25px;
+	margin: 0 0 0 20px;
+}
+.nav-two .con ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+.slider-wrap{
+    width:100%;
+    border-bottom: 1px solid rgb(221,221,221);
+    margin: 0 auto ;
+}
+.slider-contents > a > img{
+    width: 100%;
+}
+.slider-wrap .slick-dots{
+    width:100%;
+    max-width:1280px;
+    margin: 17px auto 0;
+    border-bottom: 1px solid #ddd ;
+    margin: 0 auto ;
+    position:relative;
+    bottom:auto;
+	box-sizing: border-box;
+}
+.slider-wrap .slick-dots li {
+	position:relative;
+    width: 20%;
+    height:100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    margin:0;
+    display:inline-block;
+    top:0;
+    left:0;
+    font-weight:700;
+    font-size:15px;
+    text-align:left;
+    letter-spacing:-0.37px;
+    line-height:18px;
+	box-sizing: border-box;
+}
+.slider-wrap>.slider-contents {
+    width: 20%;
+    display: inline-block;
+    padding: 20px 40px 38px 35px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(0,0,0);
+    line-height: 18px;
+    letter-spacing: -0.37px;
+    text-align: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.slider-wrap .slick-dots li span:after{
+    display:block;
+    width:100%;
+    height:20px;
+    background-color:red;
+}
+.slider-wrap .slick-dots .slick-active span{
+	color:red;
+}
+.slider-wrap .slick-dots li > span{
+    display:block;
+    width:100%;
+}
+.slider-wrap>.slider-contents>a .img-box {
+	position: relative;
+}
+.slider-contents>a .img-box-txt {
+	width:100%;
+	max-width: 1280px;
+	position: absolute;
+	bottom: 28.846%;
+	box-sizing: border-box;
+    transform: translateX(30%);
+}
+.slider-contents>a .img-box-txt>p {
+    display:inline-block;
+    font-weight:700;
+    font-size:30px;
+    line-height:36px;
+    color:white;
+}
+.slider-contents>a .img-box-txt>p::after {
+    background-image:url("https://www.leica-store.co.kr/pc/resource/images/common/arr_right_rd_22x16.png");
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 16px;
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 10px;
+    background-position: center center;
+}
+.banner-box-main {
+    min-width: 1200px;
+    overflow: hidden;
+    padding: 40px 40px 0;
+    background-color: rgb(241,243,244);
+    box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+    box-sizing: border-box;
+}
+.banner-box-main>.row {
+    max-width: 1280px;
+    margin: 40px auto 0;
+    position: relative;
+    top: 100%;
+    left: 0;
+}
+img {
+    vertical-align:middle;
+    border:0;
+}
+.banner-box-main img {
+    width:100%;
+}
+.banner-box-main a{
+    display:inline-block;
+}
+.banner-box-main> .wide {
+	width: 1820px;
+	margin: 0 auto;
+	position: relative;
+	top:0;
+	left:0;
+	z-index: 3;
+}
+.banner-box-main>.wide .info {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+.banner-box-main .info .category{
+    font-weight: 400;
+    font-size: 15px;
+	color: rgb(255,255,255);
+}
+p{
+	display: block;
+}
+.banner-box-main .info .category{
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(255,255,255);
+}
+.banner-box-main .info .desc{
+   margin: 19px 0 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(255,255,255);
+    line-height: 36px;
+}
+.banner-box-main .desc::after {
+	width: 22px;
+    height: 16px;
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://www.leica-store.co.kr/pc/resource/images/common/arr_right_rd_22x16.png);
+}
+.banner-box-main>.row>.left {
+	position: relative;
+	top:0;
+	left: 0;
+	z-index: 3;
+}
+.banner-box-main>.row>.right {
+	position: relative;
+	top:0;
+	right:0;
+}
+.banner-box-main>.row .info {
+	position: absolute;
+	top:80;
+	left: 0;
+	z-index: 5;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 40px;
+	bottom: 20px;
+}
+.banner-box-main>.row>.right>.bottom {
+	padding-top: 40px;
+}
+.slider-banner {
+	position: relative;
+	z-index: 1;
+	min-width: 1200px;
+	overflow: hidden;
+	padding: 40px 0 0 ;
+	top:0;
+	left:0;
+}
